@@ -1,0 +1,16 @@
+table {
+    width: 50%;
+    
+  }
+
+  ngb-pagination ::ng-deep ul > li:not(.active) > a {
+    background-color: white !important;
+    color:#FE48BA;
+    font-weight: bold;
+}
+
+ngb-pagination ::ng-deep ul > li.active > a {
+    background-color: #FE48BA !important;
+    color: white;
+    font-weight: bold;
+}

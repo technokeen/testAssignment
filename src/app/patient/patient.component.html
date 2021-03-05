@@ -1,0 +1,53 @@
+<div class="container">
+
+  <button type="button" class="button-container btn btn-lg" ><span style="color: white;"> ADD NEW PATIENTS +</span></button>
+    <div class="input-group">
+        <input class="col-sm-6" id="ex3" type="text" placeholder="TYPE PATIENT ID">
+        <a href="#"><span class="input-group-text" ><mat-icon>search</mat-icon></span></a>
+    </div>
+  
+      
+      
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="patientId">
+      <mat-header-cell *matHeaderCellDef class="header-align">PATIENT ID </mat-header-cell>
+      <mat-cell *matCellDef="let element" class="cell-align"> {{element.patientId}} </mat-cell>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="scanDate" >
+      <mat-header-cell *matHeaderCellDef class="header-align" > SCAN DATE</mat-header-cell>
+      <mat-cell *matCellDef="let element" class="cell-normal-align"> {{today | date:' d-MMM-yyy'}} </mat-cell>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="reportStatus">
+      <mat-header-cell *matHeaderCellDef class="header-align">REPORT STATUS <mat-icon style="margin-right: 15px;">filter_alt</mat-icon></mat-header-cell>
+      <mat-cell *matCellDef="let element" class="cell-normal-align">{{element.reportStatus}}</mat-cell>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef class="header-align" >ACTIONS </mat-header-cell>
+      <mat-cell *matCellDef="let row" class="cell-normal-align"> 
+          <div >
+            <a href="#"><mat-icon class="group-icons" >cloud</mat-icon></a>
+            <a href="#"><mat-icon class="group-icons" >download</mat-icon></a>
+            <a href="#"><mat-icon class="group-icons" >add_circle_outline</mat-icon></a>
+          </div>
+      </mat-cell>
+    </ng-container>
+  </mat-table>     
+  
+  <div class="pagination-group" >  
+    <button type="button" class="button-set btn btn-sm" style="margin-right: 80px; "><mat-icon>arrow_back_io</mat-icon></button>
+    <ngb-pagination [collectionSize]="70" [(page)]="page" [boundaryLinks]="true" color="pink" ></ngb-pagination>
+    <button type="button" class="button-set btn btn-sm" style="margin-left: 80px; "><mat-icon>arrow_forward</mat-icon></button>
+  </div>
+
+
+</div>

@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+div.container{
+    margin:40px 40px;
+    padding-top: 50px;
+    padding-left: 130px;
+}
+
+
+
+.button-container {
+  margin-left: 320px;
+  background-color:#FE48BA;
+  width: 350px;
+}
+
+.input-group{
+  display: inline-flex; 
+  justify-content: center; 
+  padding: 15px;
+}
+
+.input-group .input-group-text{
+  background-color: #FE48BA; 
+  color: white;
+}
+
+.header-align {
+  background-color: lightgray; 
+  color: grey;
+  font-weight: bolder;
+  font-size: medium;
+  justify-content: center;
+  border: 3px solid black;  
+  
+  
+}
+
+.cell-align {
+  color: blue; 
+  font-weight: bold;
+  justify-content: center;
+  border: 3px solid black; 
+   
+}
+
+.cell-normal-align{
+  color: grey;
+  font-weight:bold;
+  justify-content: center;
+  border: 3px solid black;
+  
+}
+
+.pagination-group{
+  padding-top: 40px; 
+  margin-left: 200px; 
+  display: inline-flex;
+  justify-content: center; 
+}
+
+.pagination-group .button-set {
+  background-color: pink;
+  width: 50px;
+  height: 35px;
+  color: white;
+}
+
+.p {
+    align-self: center;
+}
+
+.group-icons{
+  margin-left: 20px;
+  color: #FE48BA;
+}
+
+
+.search-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:20px;
+}
+ 
